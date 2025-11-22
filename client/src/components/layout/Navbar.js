@@ -47,10 +47,20 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Link to="/" className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">E</span>
+                <img 
+                  src="/tab-logo.png" 
+                  alt="TAB Logo" 
+                  className="w-10 h-10 object-contain"
+                  onError={(e) => {
+                    // Fallback if image doesn't exist
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
+                  }}
+                />
+                <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center hidden">
+                  <span className="text-white font-bold text-lg">T</span>
                 </div>
-                <span className="text-xl font-bold text-gray-900">Esocial</span>
+                <span className="text-xl font-bold text-gray-900">TAB</span>
               </Link>
             </div>
             
@@ -81,10 +91,20 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/home" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">E</span>
+              <img 
+                src="/tab-logo.png" 
+                alt="TAB Logo" 
+                className="w-10 h-10 object-contain"
+                onError={(e) => {
+                  // Fallback if image doesn't exist
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
+                }}
+              />
+              <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center hidden">
+                <span className="text-white font-bold text-lg">T</span>
               </div>
-              <span className="text-xl font-bold text-gray-900">Esocial</span>
+              <span className="text-xl font-bold text-gray-900">TAB</span>
             </Link>
           </div>
 

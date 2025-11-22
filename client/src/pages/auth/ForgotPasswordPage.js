@@ -94,10 +94,19 @@ const ForgotPasswordPage = () => {
           className="text-center"
         >
           <Link to="/" className="flex items-center justify-center space-x-2 mb-6">
-            <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">E</span>
+            <img 
+              src="/tab-logo.png" 
+              alt="TAB Logo" 
+              className="w-12 h-12 object-contain"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'flex';
+              }}
+            />
+            <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center hidden">
+              <span className="text-white font-bold text-xl">T</span>
             </div>
-            <span className="text-2xl font-bold text-gray-900">Esocial</span>
+            <span className="text-2xl font-bold text-gray-900">TAB</span>
           </Link>
           <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 mb-6">
             <Mail className="h-6 w-6 text-blue-600" />

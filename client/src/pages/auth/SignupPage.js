@@ -101,16 +101,25 @@ const SignupPage = () => {
           className="text-center"
         >
           <Link to="/" className="flex items-center justify-center space-x-2 mb-6">
-            <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">E</span>
+            <img 
+              src="/tab-logo.png" 
+              alt="TAB Logo" 
+              className="w-12 h-12 object-contain"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'flex';
+              }}
+            />
+            <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center hidden">
+              <span className="text-white font-bold text-xl">T</span>
             </div>
-            <span className="text-2xl font-bold text-gray-900">Esocial</span>
+            <span className="text-2xl font-bold text-gray-900">TAB</span>
           </Link>
           <h2 className="text-3xl font-bold text-gray-900">
             Create your account
           </h2>
           <p className="mt-2 text-sm text-gray-600">
-            Join the Esocial community today
+            Join the TAB community today
           </p>
         </motion.div>
       </div>

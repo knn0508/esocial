@@ -72,10 +72,19 @@ const LoginPage = () => {
           className="text-center"
         >
           <Link to="/" className="flex items-center justify-center space-x-2 mb-6">
-            <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">E</span>
+            <img 
+              src="/tab-logo.png" 
+              alt="TAB Logo" 
+              className="w-12 h-12 object-contain"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'flex';
+              }}
+            />
+            <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center hidden">
+              <span className="text-white font-bold text-xl">T</span>
             </div>
-            <span className="text-2xl font-bold text-gray-900">Esocial</span>
+            <span className="text-2xl font-bold text-gray-900">TAB</span>
           </Link>
           <h2 className="text-3xl font-bold text-gray-900">
             Welcome back
@@ -191,7 +200,7 @@ const LoginPage = () => {
                 <div className="w-full border-t border-gray-300" />
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-white text-gray-500">New to Esocial?</span>
+                <span className="px-2 bg-white text-gray-500">New to TAB?</span>
               </div>
             </div>
 

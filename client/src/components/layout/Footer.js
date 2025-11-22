@@ -9,10 +9,20 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">E</span>
+              <img 
+                src="/tab-logo.png" 
+                alt="TAB Logo" 
+                className="w-10 h-10 object-contain"
+                onError={(e) => {
+                  // Fallback if image doesn't exist
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
+                }}
+              />
+              <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center hidden">
+                <span className="text-white font-bold text-lg">T</span>
               </div>
-              <span className="text-xl font-bold text-gray-900">Esocial</span>
+              <span className="text-xl font-bold text-gray-900">TAB</span>
             </div>
             <p className="text-gray-600 text-sm max-w-md">
               A social platform connecting students and teachers for mentorship, 
@@ -56,7 +66,7 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2">
               <li>
-                <a href="mailto:support@esocial.edu" className="text-sm text-gray-600 hover:text-primary-600">
+                <a href="mailto:support@tab.edu" className="text-sm text-gray-600 hover:text-primary-600">
                   Contact Support
                 </a>
               </li>
@@ -82,7 +92,7 @@ const Footer = () => {
         <div className="mt-8 pt-8 border-t border-gray-200">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-600">
-              © 2024 Esocial. All rights reserved.
+              © 2024 TAB. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-gray-500">
